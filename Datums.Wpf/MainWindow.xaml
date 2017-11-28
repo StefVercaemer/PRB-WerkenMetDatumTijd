@@ -1,0 +1,18 @@
+﻿<Window x:Class="Datums.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Datums.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="650.318">
+    <Grid>
+        <Label x:Name="lblTijdsAanduiding" Content="" HorizontalAlignment="Left" Margin="5,7,0,0" VerticalAlignment="Top" Width="203" Background="#FFF5F9A1"/>
+        <Label HorizontalAlignment="Left" Margin="5,38,0,0" VerticalAlignment="Top" Width="203">
+            <DatePicker x:Name="dtDatum" SelectedDateChanged="dtDatum_SelectedDateChanged"/>
+        </Label>
+        <TextBlock x:Name="tbFeedback" HorizontalAlignment="Left" Margin="10,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="129" Width="368"/>
+        <Label x:Name="lblTimer" Content="" HorizontalAlignment="Left" Margin="222,7,0,0" VerticalAlignment="Top" Width="285" Background="#FFBDEEA1"/>
+        <Button x:Name="btnStartStopTimer" Content="Stop timer" HorizontalAlignment="Left" Margin="512,7,0,0" VerticalAlignment="Top" Width="77" Height="26" Click="btnStartStopTimer_Click"/>
+    </Grid>
+</Window>
