@@ -1,18 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Timers;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Datums.Wpf
 {
@@ -23,6 +12,7 @@ namespace Datums.Wpf
     {
         DateTime opstartMoment;
         DateTime opstartDatum;
+
         int interval = 1000;
         Timer timer;
 
@@ -42,11 +32,11 @@ namespace Datums.Wpf
         {
             timer = new Timer();
             timer.Interval = interval;
-            timer.Elapsed += Timer_Elapsed;
+            timer.Elapsed += TelkensUitTeVoeren;
             timer.Enabled = true;
         }
 
-        void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        void TelkensUitTeVoeren(object sender, ElapsedEventArgs e)
         {
             Dispatcher.Invoke(() =>
             {
